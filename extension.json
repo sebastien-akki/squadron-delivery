@@ -1,0 +1,38 @@
+{
+  "id": "delivery",
+  "version": "0.1.0",
+  "api": 1,
+  "squadron": ">=0.47.0",
+  "name": {
+    "en": "Delivery notes",
+    "fr": "Notes de livraison"
+  },
+  "description": {
+    "en": "Writes a project's delivery note for its client from the commits, merged pull requests and Jira tickets of a period: new, improved and fixed, in plain words, with what to test, as a page to share and a text for an email.",
+    "fr": "Rédige la note de livraison d’un projet pour son client à partir des commits, des pull requests fusionnées et des tickets Jira d’une période : nouveautés, améliorations et corrections en mots simples, avec ce qu’il faut tester, en page à partager et en texte pour un e-mail."
+  },
+  "logo": "logo.svg",
+  "contributes": {
+    "skills": [
+      "skills/notes"
+    ],
+    "items": [
+      {
+        "slot": "agent.menu",
+        "id": "write",
+        "label": {
+          "en": "Write the delivery note",
+          "fr": "Rédiger la note de livraison"
+        },
+        "hint": {
+          "en": "For the client, since the last delivery",
+          "fr": "Pour le client, depuis la dernière livraison"
+        },
+        "icon": "artifact",
+        "action": {
+          "prompt.insert": "Use the delivery:notes skill to write this project's delivery note for the client, since the last delivery."
+        }
+      }
+    ]
+  }
+}
